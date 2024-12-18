@@ -41,7 +41,6 @@ colorscheme catppuccin_mocha
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-"-- My keymap --"
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 nnoremap <S-n> :Oil<CR> :only<CR>
 let g:netrw_liststyle = 3
@@ -49,7 +48,6 @@ let g:netrw_banner = 0
 
 filetype plugin on
 
-" floaterm
 let g:floaterm_width = &columns
 let g:floaterm_height =  25 
 let g:floaterm_position = 'bottom'
