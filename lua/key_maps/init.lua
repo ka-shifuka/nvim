@@ -1,6 +1,7 @@
 -- [[ editor options ]]
 local opt = vim.opt
 
+opt.number = true
 opt.relativenumber = true
 opt.compatible = false
 opt.backup = false
@@ -22,7 +23,7 @@ map('n', '<C-o>', ':Oil<cr>')
 map('n', '<S-i>', ':CocList extensions<cr>')
 map('n', '<C-x>', ':q!<cr>')
 map('n', '<ESC>', ':q<cr>')
-map('n', '<C-o>', ':tabnew<CR>:Telescope find_files<CR>')
+map('n', '<S-r>', ':%s/')
 map('n', 'wf', ':Format<cr>')
 map('n', 'ww', ':w<cr>')
 map('n', 'pp', ':Prettier<CR>')
@@ -31,8 +32,8 @@ map('n', 't', ':Telescope find_files<CR>')
 map('n', '<leader>m', ':lua require("harpoon.mark").add_file()<CR>')
 map('n', '<leader>h', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
 map('n', '<leader>i', ':lua require("harpoon.ui").select_menu_item()<CR>')
-map('n', 'nn', ':lua require("harpoon.ui").nav_next()<CR>')
-map('n', 'bb', ':lua require("harpoon.ui").nav_prev()<CR>')
+map('n', '<leader>n', ':lua require("harpoon.ui").nav_next()<CR>')
+map('n', '<leader>b', ':lua require("harpoon.ui").nav_prev()<CR>')
 map('n', '<leader>t', ':tabnew<CR>:Telescope find_files<CR>')
 
 map('i', '<C-k>', '/***/ <Left><Left><Left>')

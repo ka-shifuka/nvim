@@ -19,20 +19,6 @@ call plug#begin()
   Plug 'stevearc/oil.nvim'
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   Plug 'tribela/vim-transparent'
-  " Plug 'tpope/vim-fugitive'
-  " Plug 'nvim-tree/nvim-tree.lua'
-  " Plug 'ryanoasis/vim-devicons'
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  " Plug 'ap/vim-css-color'
-  " Plug 'scrooloose/nerdtree'
-  " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  " Plug 'echasnovski/mini.icons'
-  " Plug 'junegunn/fzf'
-  " Plug 'psliwka/vim-smoothie'
-  " Plug 'kyazdani42/nvim-web-devicons'
-  " theme "
-  " Plug 'sickill/vim-monokai'
-  " Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -42,7 +28,6 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-nnoremap <S-n> :Oil<CR> :only<CR>
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0  
 
