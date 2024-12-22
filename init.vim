@@ -9,7 +9,7 @@ call plug#begin()
   Plug 'ThePrimeagen/harpoon'
   Plug 'nvim-telescope/telescope.nvim'  
   Plug 'tpope/tpope-vim-abolish'
-  Plug 'Aasim-A/scrollEOF.nvim'
+  " Plug 'Aasim-A/scrollEOF.nvim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'voldikss/vim-floaterm'
   Plug 'itchyny/lightline.vim'
@@ -27,7 +27,6 @@ colorscheme catppuccin_mocha
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0  
 
@@ -39,11 +38,17 @@ let g:floaterm_position = 'bottom'
 let g:move_key_modifier = 'S'
 let g:move_key_modifier_visualmode = 'S'
 
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-emmet', 'coc-tsserver', 'coc-pairs', 'coc-clangd', '@yaegassy/coc-tailwindcss3', '@yaegassy/coc-volar', 'coc-css']
 hi CocFloating ctermbg=Black
 
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
 au FileType vue let b:coc_root_patterns = ['.git', '.env', 'package.json', 'tsconfig.json', 'jsconfig.json', 'vite.config.ts', 'vite.config.js', 'vue.config.js', 'nuxt.config.ts']
 let g:indentLine_char = '▏'
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 
 " termux api cliboard need termux:api.apk
 au TextYankPost * call system('termux-clipboard-set &', @")
@@ -60,6 +65,6 @@ noremap <expr> <C-p> Paste('P')
 
 lua << EOF
 require('key_maps')
-require('scrollEOF').setup()
 require('oil_setup')
 require('coc_setup')
+require('harpoon_setup')

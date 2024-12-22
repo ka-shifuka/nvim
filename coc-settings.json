@@ -45,7 +45,6 @@
     "vue-html": "html"
   },
   "clangd.trace.server": "messages",
-  "snippets.ultisnips.pythonPrompt": false,
   "prettier.vueIndentScriptAndStyle": true,
   "sumneko-lua.enableNvimLuaDev": true
 }
