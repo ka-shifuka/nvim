@@ -9,7 +9,7 @@ call plug#begin()
   Plug 'ThePrimeagen/harpoon'
   Plug 'nvim-telescope/telescope.nvim'  
   Plug 'tpope/tpope-vim-abolish'
-  " Plug 'Aasim-A/scrollEOF.nvim'
+  Plug 'Aasim-A/scrollEOF.nvim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'voldikss/vim-floaterm'
   Plug 'itchyny/lightline.vim'
@@ -25,7 +25,7 @@ call plug#end()
 colorscheme catppuccin_mocha
 
 nnoremap <SPACE> <Nop>
-let mapleader=" "
+let mapleader = " "
 
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0  
@@ -44,7 +44,9 @@ hi CocFloating ctermbg=Black
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
 au FileType vue let b:coc_root_patterns = ['.git', '.env', 'package.json', 'tsconfig.json', 'jsconfig.json', 'vite.config.ts', 'vite.config.js', 'vue.config.js', 'nuxt.config.ts']
+
 let g:indentLine_char = '▏'
+let g:indentLine_setColors = 0
 
 let g:lightline = {
       \ 'colorscheme': 'one',
