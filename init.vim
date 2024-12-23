@@ -13,18 +13,40 @@ call plug#begin()
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'stevearc/oil.nvim'
   Plug 'tribela/vim-transparent'
+  Plug 'HiPhish/rainbow-delimiters.nvim'
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
-colorscheme catppuccin_mocha
+colorscheme catppuccin_mocha 
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0  
+
+let g:rainbow_delimiters = {
+    \ 'strategy': {
+        \ '': rainbow_delimiters#strategy.global,
+    \ },
+    \ 'query': {
+        \ '': 'rainbow-delimiters',
+    \ },
+    \ 'priority': {
+        \ '': 110,
+    \ },
+    \ 'highlight': [
+        \ 'RainbowDelimiterBlue',
+        \ 'RainbowDelimiterCyan',
+        \ 'RainbowDelimiterGreen',
+        \ 'RainbowDelimiterViolet',
+        \ 'RainbowDelimiterYellow',
+        \ 'RainbowDelimiterOrange',
+        \ 'RainbowDelimiterRed',
+    \ ],
+    \ }
 
 filetype plugin on
 
@@ -46,7 +68,7 @@ au FileType vue let b:coc_root_patterns = ['.git', '.env', 'package.json', 'tsco
 let g:indentLine_char = '▏'
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'ayu_mirage',
       \ }
 
 " termux api cliboard need termux:api.apk
