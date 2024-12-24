@@ -5,3 +5,4 @@ main component
 - vim plug
 - coc.nvim
 
+

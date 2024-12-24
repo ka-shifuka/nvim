@@ -71,19 +71,6 @@ let g:lightline = {
       \ 'colorscheme': 'ayu_mirage',
       \ }
 
-" termux api cliboard need termux:api.apk
-au TextYankPost * call system('termux-clipboard-set &', @")
-function Paste(p)
-    let sysclip=system('termux-clipboard-get')
-    if sysclip != @"
-        let @"=sysclip
-    endif
-    return a:p
-endfunction
-noremap <expr> <C-p> Paste('p')
-noremap <expr> <C-p> Paste('P')
-
-
 lua << EOF
 require('key_maps')
 require('oil_setup')
