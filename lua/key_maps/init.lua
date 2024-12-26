@@ -8,7 +8,7 @@ opt.backup = false
 opt.swapfile = false
 opt.autoread = true
 opt.cursorline = true
-opt.lazyredraw = false
+opt.lazyredraw = true
 opt.scrolloff = 8
 
 -- indentations

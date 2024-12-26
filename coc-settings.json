@@ -46,5 +46,12 @@
   },
   "clangd.trace.server": "messages",
   "prettier.vueIndentScriptAndStyle": true,
-  "sumneko-lua.enableNvimLuaDev": true
+  "sumneko-lua.enableNvimLuaDev": true,
+  "languageserver": {
+    "lua": {
+      "command": "lua-language-server",
+      "filetypes": ["lua"],
+      "trace.server": "verbose"
+    }
+  }
 }
