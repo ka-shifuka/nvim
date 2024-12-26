@@ -17,6 +17,7 @@ opt.breakindent = true
 -- color
 opt.termguicolors = true
 
+
 -- keymaps
 local map = vim.keymap.set
 

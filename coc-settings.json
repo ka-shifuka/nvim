@@ -19,8 +19,19 @@
     "vue": "html",
     "vue-html": "html"
   },
-  "emmet.excludeLanguages": ["markdown", "js", "ts"],
-  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "emmet.excludeLanguages": [
+    "markdown",
+    "js",
+    "ts"
+  ],
+  "pairs.enableCharacters": [
+    "(",
+    "[",
+    "{",
+    "'",
+    "\"",
+    "`"
+  ],
   "vetur.ignoreProjectWarning": false,
   "vetur.validation.style": false,
   "vetur.validation.script": false,
@@ -46,12 +57,46 @@
   },
   "clangd.trace.server": "messages",
   "prettier.vueIndentScriptAndStyle": true,
-  "sumneko-lua.enableNvimLuaDev": true,
   "languageserver": {
     "lua": {
       "command": "lua-language-server",
-      "filetypes": ["lua"],
-      "trace.server": "verbose"
+      "filetypes": [
+        "lua"
+      ],
+      "trace.server": "verbose",
+      "rootPatterns": [
+        ".git/",
+        ".editorconfig"
+      ],
+      "settings": {
+        "workspace": {
+          "library": [
+            "$HOME/.local/share/nvim/plugged/harpoon"
+          ],
+          "maxPreload": 2000,
+          "preloadFileSize": 1000
+        },
+        "runtime": {
+          "version": "Lua 5.4"
+        },
+        "diagnostics": {
+          "enable": true,
+          "globals": [
+            "hs",
+            "vim",
+            "it",
+            "describe",
+            "before_each",
+            "after_each"
+          ],
+          "disable": [
+            "lowercase-global"
+          ]
+        },
+        "completion": {
+          "keywordSnippet": "Disable"
+        }
+      }
     }
   }
 }
