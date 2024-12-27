@@ -3,5 +3,8 @@
   "diagnostics.enable": true,
   "diagnostics.globals": [
     "vim"
+  ],
+  "workspace.library": [
+    "$PREFIX/share/nvim/runtime/lua"
   ]
 }

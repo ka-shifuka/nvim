@@ -70,9 +70,7 @@
       ],
       "settings": {
         "workspace": {
-          "library": [
-            "$HOME/.local/share/nvim/plugged/harpoon"
-          ],
+          "library": [],
           "maxPreload": 2000,
           "preloadFileSize": 1000
         },
