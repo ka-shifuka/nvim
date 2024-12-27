@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'HiPhish/rainbow-delimiters.nvim'
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/nvim-treesitter-context'
 
 call plug#end()
 
