@@ -66,7 +66,7 @@ au FileType vue let b:coc_root_patterns = ['.git', '.env', 'package.json', 'tsco
 
 
 let g:lightline = {
-      \ 'colorscheme': 'ayu_mirage',
+      \ 'colorscheme': 'rosepine_moon',
       \ }
 
 lua << EOF
