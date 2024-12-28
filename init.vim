@@ -10,15 +10,15 @@ call plug#begin()
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'stevearc/oil.nvim'
-  Plug 'tribela/vim-transparent'
   Plug 'HiPhish/rainbow-delimiters.nvim'
-  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+  Plug 'tribela/vim-transparent'
+  Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
 
 call plug#end()
 
-colorscheme catppuccin_mocha 
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -76,3 +76,7 @@ require('coc_setup')
 require('harpoon_setup')
 require('treesitter_setup')
 require('ibl_setup')
+require('rosepine_setup')
+require('catppuccin_setup')
+
+vim.cmd("colorscheme catppuccin-mocha")

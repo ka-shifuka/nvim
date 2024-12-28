@@ -9,6 +9,7 @@ opt.swapfile = false
 opt.autoread = true
 opt.cursorline = true
 opt.lazyredraw = true
+opt.updatetime = 300
 opt.scrolloff = 8
 
 -- indentations
