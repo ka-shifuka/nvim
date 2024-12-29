@@ -18,13 +18,13 @@ end
 
 set -g USER "ka-shifuka"
 
-# Jalankan sshd saat pertama kali masuk
+alias ex exit
+
 #     echo -n -s -e '\e[92mka-shifuka\e[34m@\e[39mterminus' 
 #     (set_color $color_cwd) (prompt_pwd) 
 #     $normal (fish_vcs_prompt) $normal " "$prompt_status $suffix " "
 #     ]]]'
 if status is-login
-    sshd
     clear
     echo -e "
    ⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷
@@ -63,3 +63,4 @@ function cl
    ⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣
     "
 end
+
