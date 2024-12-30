@@ -57,7 +57,7 @@ let g:move_key_modifier_visualmode = 'S'
 let g:indentLine_setConceal = 0 
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-emmet', 'coc-tsserver', 'coc-pairs', 'coc-clangd', '@yaegassy/coc-tailwindcss3', '@yaegassy/coc-volar', 'coc-css']
+let g:coc_global_extensions = ['coc-json', 'coc-pairs', 'coc-clangd']
 hi CocFloating ctermbg=DarkBlue
 
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
@@ -79,4 +79,4 @@ require('ibl_setup')
 require('rosepine_setup')
 require('catppuccin_setup')
 
-vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme rose-pine-moon")
