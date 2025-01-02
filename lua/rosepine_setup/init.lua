@@ -14,6 +14,7 @@ require("rose-pine").setup({
         bold = false,
         italic = false,
         transparency = true,
+        underline = false
     },
 
     groups = {
