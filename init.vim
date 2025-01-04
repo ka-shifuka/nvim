@@ -68,7 +68,6 @@ let g:lightline = {
       \ }
 
 lua << EOF
-require('key_maps')
 require('oil_setup')
 require('coc_setup')
 require('harpoon_setup')
@@ -76,5 +75,6 @@ require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
 require('catppuccin_setup')
+require('key_maps')
 
 vim.cmd("colorscheme rose-pine-moon")

@@ -14,7 +14,6 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.scrolloff = 8
 
-
 -- indentations
 opt.breakindent = true
 
@@ -58,3 +57,18 @@ map("v", "<C-j>", "10gj")
 map("v", "<C-k>", "10gk")
 map("n", "l", "e")
 map("n", "h", "b")
+
+local state = true
+function chnumber()
+    if state then
+        vim.opt.number = false
+        vim.opt.relativenumber = false
+        state = false
+        return
+    end
+    state = true
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+end
+
+map("n", "<C-n>", chnumber)
