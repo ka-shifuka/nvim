@@ -104,8 +104,11 @@
             ],
             "trace.server": "verbose",
             "rootPatterns": [
+                ".editorconfig",
+                ".luarc.json",
                 ".git/",
-                ".editorconfig"
+                "main.lua",
+                "init.lua"
             ],
             "settings": {
                 "workspace": {

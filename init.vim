@@ -49,6 +49,16 @@ let g:rainbow_delimiters = {
 
 filetype plugin on
 
+function Paste(p)
+    let sysclip=system('termux-clipboard-get')
+    if sysclip != @"
+       let @"=sysclip
+    endif
+    return a:p
+endfunction
+noremap <expr> p Paste('p'
+noremap <expr> P Paste()'P')")
+
 let g:floaterm_width = &columns
 let g:floaterm_height =  25 
 let g:floaterm_position = 'bottom'
