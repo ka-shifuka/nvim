@@ -1,0 +1,4 @@
+[advice]
+	addIgnoredFile = false
+[safe]
+	directory = *
