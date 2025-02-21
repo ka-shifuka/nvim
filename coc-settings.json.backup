@@ -2,11 +2,11 @@
     "coc.preferences.formatOnSave": false,
     "suggest.floatConfig": {
         "border": true,
-        "rounded": true
+        "rounded": true,
     },
     "signature.floatConfig": {
         "rounded": true,
-        "border": true
+        "border": true,
     },
     "hover.floatConfig": {
         "maxWidth": 50
@@ -58,8 +58,19 @@
         "vue": "html",
         "vue-html": "html"
     },
-    "emmet.excludeLanguages": ["markdown", "js", "ts"],
-    "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+    "emmet.excludeLanguages": [
+        "markdown",
+        "js",
+        "ts"
+    ],
+    "pairs.enableCharacters": [
+        "(",
+        "[",
+        "{",
+        "'",
+        "\"",
+        "`"
+    ],
     "vetur.ignoreProjectWarning": false,
     "vetur.validation.style": false,
     "vetur.validation.script": false,
@@ -86,15 +97,11 @@
     "clangd.trace.server": "messages",
     "prettier.vueIndentScriptAndStyle": true,
     "languageserver": {
-        "rust": {
-            "command": "rust-analyzer",
-            "filetypes": ["rust", "rs"],
-            "trace.server": "messages",
-            "rootPatterns": ["Cargo.toml", ".editorconfig"]
-        },
         "lua": {
             "command": "lua-language-server",
-            "filetypes": ["lua"],
+            "filetypes": [
+                "lua"
+            ],
             "trace.server": "verbose",
             "rootPatterns": [
                 ".editorconfig",
@@ -122,7 +129,9 @@
                         "before_each",
                         "after_each"
                     ],
-                    "disable": ["lowercase-global"]
+                    "disable": [
+                        "lowercase-global"
+                    ]
                 },
                 "completion": {
                     "keywordSnippet": "Disable"

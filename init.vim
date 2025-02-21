@@ -72,6 +72,7 @@ require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
 require('catppuccin_setup')
+require('telescope_setup')
 require('key_maps')
 
 vim.cmd("colorscheme rose-pine-dawn")
