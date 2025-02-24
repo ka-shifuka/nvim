@@ -51,12 +51,14 @@
         "vue",
         "javascriptreact",
         "typescriptreact",
-        "angular"
+        "angular",
+        "javascript"
     ],
     "emmet.includeLanguages": {
         "html": "html",
         "vue": "html",
-        "vue-html": "html"
+        "vue-html": "html",
+        "javascript": "html"
     },
     "emmet.excludeLanguages": ["markdown", "js", "ts"],
     "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],

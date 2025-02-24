@@ -3,7 +3,6 @@ call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
   Plug 'ThePrimeagen/harpoon'
   Plug 'nvim-telescope/telescope.nvim'  
-  Plug 'voldikss/vim-floaterm'
   Plug 'itchyny/lightline.vim'
   Plug 'matze/vim-move'
   Plug 'nvim-tree/nvim-web-devicons'
@@ -12,9 +11,9 @@ call plug#begin()
   Plug 'HiPhish/rainbow-delimiters.nvim'
   Plug 'tribela/vim-transparent'
   Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
-  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 nnoremap <SPACE> <Nop>
@@ -45,19 +44,12 @@ let g:rainbow_delimiters = {
 
 filetype plugin on
 
-let g:floaterm_width = &columns
-let g:floaterm_height =  25 
-let g:floaterm_position = 'bottom'
 let g:move_key_modifier = 'S'
 let g:move_key_modifier_visualmode = 'S'
 let g:indentLine_setConceal = 0 
 
 let g:coc_global_extensions = ['coc-json', 'coc-pairs']
 hi CocFloating ctermbg=LightBlue
-
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
-au FileType vue let b:coc_root_patterns = ['.git', '.env', 'package.json', 'tsconfig.json', 'jsconfig.json', 'vite.config.ts', 'vite.config.js', 'vue.config.js', 'nuxt.config.ts']
 
 set background=light
 let g:lightline = {
@@ -71,7 +63,6 @@ require('harpoon_setup')
 require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
-require('catppuccin_setup')
 require('telescope_setup')
 require('key_maps')
 

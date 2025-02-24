@@ -40,6 +40,8 @@ map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")
 map("n", "<leader>n", ":lua require(\"harpoon.ui\").nav_next()<cr>")
 map("n", "<leader>b", ":lua require(\"harpoon.ui\").nav_prev()<cr>")
 
+map("n", "gh", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>")
+
 map("i", "<C-k>", "/***/ <Left><Left><Left>")
 map("n", "<leader>d", "\"_d")
 map("x", "<leader>d", "\"_d")
@@ -71,3 +73,4 @@ function chnumber()
 end
 
 map("n", "<C-n>", chnumber)
+
