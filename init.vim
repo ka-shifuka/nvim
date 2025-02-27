@@ -13,7 +13,6 @@ call plug#begin()
   Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
-  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 nnoremap <SPACE> <Nop>

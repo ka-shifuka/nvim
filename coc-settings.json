@@ -60,7 +60,7 @@
         "vue-html": "html",
         "javascript": "html"
     },
-    "emmet.excludeLanguages": ["markdown", "js", "ts"],
+    "emmet.excludeLanguages": ["markdown"],
     "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
     "vetur.ignoreProjectWarning": false,
     "vetur.validation.style": false,

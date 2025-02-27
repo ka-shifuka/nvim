@@ -33,6 +33,8 @@ map("n", "wf", ":Format<cr>")
 map("n", "tt", ":Telescope find_files<cr>")
 map("n", "th", ":Telescope harpoon marks<cr>")
 map("n", "r", ":redraw<cr> :noh<cr>")
+map("n", "<C-c>", "<ESC>")
+map("x", "<C-c>", "<ESC>")
 
 map("n", "<leader>m", ":lua require(\"harpoon.mark\").add_file()<cr>")
 map("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>")
@@ -73,4 +75,3 @@ function chnumber()
 end
 
 map("n", "<C-n>", chnumber)
-
