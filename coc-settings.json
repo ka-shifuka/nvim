@@ -87,13 +87,11 @@
     },
     "clangd.trace.server": "messages",
     "prettier.vueIndentScriptAndStyle": true,
+    "zig.enabled": true,
+    "zig.startUpMessage": true,
+    "zig.path": "zls",
+    "zig.debugLog": false,
     "languageserver": {
-        "rust": {
-            "command": "rust-analyzer",
-            "filetypes": ["rust", "rs"],
-            "trace.server": "messages",
-            "rootPatterns": ["Cargo.toml", ".editorconfig"]
-        },
         "lua": {
             "command": "lua-language-server",
             "filetypes": ["lua"],

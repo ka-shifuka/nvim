@@ -33,9 +33,9 @@ map("n", "r", ":redraw<cr> :noh<cr>")
 map("n", "<C-c>", "<ESC>")
 map("x", "<C-c>", "<ESC>")
 
-map("n", "<leader>we", ":Format<cr>")
-map("n", "<leader>ww", ":w<cr>")
-map("n", "<leader>wq", ":q<cr>")
+map("n", "we", ":Format<cr>")
+map("n", "ww", ":w<cr>")
+map("n", "wq", ":q<cr>")
 map("n", "<leader>m", ":lua require(\"harpoon.mark\").add_file()<cr>")
 map("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>")
 map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")
@@ -56,6 +56,39 @@ map("n", "<C-j>", "10gj")
 map("n", "<C-k>", "10gk")
 map("v", "<C-j>", "10gj")
 map("v", "<C-k>", "10gk")
+
+local upWordState = false
+function changeL()
+    local mode = vim.api.nvim_get_mode().mode
+    if upWordState and mode == "n" then
+        vim.cmd(":normal w<CR>")
+        upWordState = false
+    elseif not upWordState and mode == "n" then
+        vim.cmd(":normal e<CR>")
+        upWordState = true
+    else
+        vim.cmd(":normal! l")
+    end
+end
+
+local downWordState = false
+function changeH()
+    local mode = vim.api.nvim_get_mode().mode
+    if downWordState and mode == "n" then
+        vim.cmd(":normal b<CR>")
+        downWordState = false
+    elseif not downWordState and mode == "n" then
+        vim.cmd(":normal ge<CR>")
+        downWordState = true
+    else
+        vim.cmd(":normal! h")
+    end
+end
+
+map("n", "l", changeL)
+map("n", "h", changeH)
+map("x", "l", changeL)
+map("x", "h", changeH)
 
 local state = true
 function chnumber()
