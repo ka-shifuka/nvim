@@ -21,27 +21,6 @@ let mapleader = " "
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0  
 
-let g:rainbow_delimiters = {
-    \ 'strategy': {
-        \ '': rainbow_delimiters#strategy.global,
-    \ },
-    \ 'query': {
-        \ '': 'rainbow-delimiters',
-    \ },
-    \ 'priority': {
-        \ '': 110,
-    \ },
-    \ 'highlight': [
-        \ 'RainbowDelimiterBlue',
-        \ 'RainbowDelimiterCyan',
-        \ 'RainbowDelimiterGreen',
-        \ 'RainbowDelimiterViolet',
-        \ 'RainbowDelimiterYellow',
-        \ 'RainbowDelimiterOrange',
-        \ 'RainbowDelimiterRed',
-    \ ],
-    \ }
-
 filetype plugin on
 
 let g:move_key_modifier = 'S'
@@ -64,6 +43,7 @@ require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
 require('telescope_setup')
+require('rainbow_setup')
 require('key_maps')
 
 vim.cmd("colorscheme rose-pine-dawn")
