@@ -1,6 +1,7 @@
 -- [[ editor options ]]
 local opt = vim.opt
 
+vim.g.editorconfig = true
 opt.number = true
 opt.relativenumber = true
 opt.compatible = false
@@ -12,7 +13,7 @@ opt.lazyredraw = true
 opt.updatetime = 300
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.scrolloff = 4
+opt.scrolloff = 6
 
 -- indentations
 opt.breakindent = true
@@ -52,10 +53,15 @@ map("x", "<leader>p", "\"+p")
 map("n", "x", "\"_x")
 map("n", "j", "gj")
 map("n", "k", "gk")
-map("n", "<C-j>", ")")
-map("n", "<C-k>", "(")
-map("v", "<C-j>", ")")
-map("v", "<C-k>", "(")
+-- map("n", "<C-j>", ")")
+-- map("n", "<C-k>", "(")
+-- map("v", "<C-j>", ")")
+-- map("v", "<C-k>", "(")
+
+map("n", "<C-j>", "10gj")
+map("n", "<C-k>", "10gk")
+map("v", "<C-j>", "10gj")
+map("v", "<C-k>", "10gk")
 
 local upWordState = false
 function changeL()

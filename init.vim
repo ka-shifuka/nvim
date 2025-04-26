@@ -14,6 +14,8 @@ call plug#begin()
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'ThePrimeagen/vim-be-good'
+
+  Plug '$HOME/repository/presentation.nvim'
 call plug#end()
 
 nnoremap <SPACE> <Nop>
@@ -45,5 +47,6 @@ require('rosepine_setup')
 require('telescope_setup')
 require('rainbow_setup')
 require('key_maps')
+require('present')
 
 vim.cmd("colorscheme rose-pine-dawn")

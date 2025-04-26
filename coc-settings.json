@@ -23,7 +23,7 @@
         "module": " module",
         "property": " property",
         "unit": " unit",
-        "value": " value",
+        "value": " value",
         "enum": " enum",
         "keyword": " keyword",
         "snippet": " snippet",
@@ -57,8 +57,7 @@
     "emmet.includeLanguages": {
         "html": "html",
         "vue": "html",
-        "vue-html": "html",
-        "javascript": "html"
+        "vue-html": "html"
     },
     "emmet.excludeLanguages": ["markdown"],
     "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
@@ -92,6 +91,12 @@
     "zig.path": "zls",
     "zig.debugLog": false,
     "languageserver": {
+        "glsl": {
+            "command": "$HOME/langserver/glsl_analyzer",
+            "filetypes": ["glsl"],
+            "trace.server": "verbose",
+            "rootPatterns": [".editorconfig"]
+        },
         "lua": {
             "command": "lua-language-server",
             "filetypes": ["lua"],
