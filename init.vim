@@ -1,4 +1,5 @@
 set nocompatible
+
 call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
   Plug 'ThePrimeagen/harpoon'
@@ -34,8 +35,17 @@ hi CocFloating ctermbg=LightBlue
 
 set background=light
 let g:lightline = {
-      \ 'colorscheme': 'rosepine',
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \             [ '', 'fileencoding', '', '' ] ]
+      \ },
+      \ 'component': {
+      \   'charvaluehex': '0x%B'
+      \ },
       \ }
+
 
 lua << EOF
 require('oil_setup')
@@ -47,6 +57,6 @@ require('rosepine_setup')
 require('telescope_setup')
 require('rainbow_setup')
 require('key_maps')
-require('present')
+-- require('present')
 
 vim.cmd("colorscheme rose-pine-dawn")

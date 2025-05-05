@@ -6,5 +6,3 @@ main component
 - vim plug
 - coc.nvim
 - tpm for tmux
-
-

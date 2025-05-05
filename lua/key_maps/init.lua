@@ -2,6 +2,7 @@
 local opt = vim.opt
 
 vim.g.editorconfig = true
+
 opt.number = true
 opt.relativenumber = true
 opt.compatible = false
@@ -24,19 +25,15 @@ opt.termguicolors = true
 -- keymaps
 local map = vim.keymap.set
 
-map("n", "<S-C>", ":CocCommand")
 map("n", "<S-o>", ":Oil<cr>")
 map("n", "<S-i>", ":CocList extensions<cr>")
-map("n", "<S-r>", ":%s/")
-map("n", "tt", ":Telescope find_files<cr>")
 map("n", "th", ":Telescope harpoon marks<cr>")
 map("n", "r", ":redraw<cr> :noh<cr>")
 map("n", "<C-c>", "<ESC>")
 map("x", "<C-c>", "<ESC>")
 
-map("n", "we", ":Format<cr>")
-map("n", "ww", ":w<cr>")
-map("n", "wq", ":q<cr>")
+map("n", "<leader>v", ":Format<cr>")
+map("n", "<leader>t", ":Telescope find_files<cr>")
 map("n", "<leader>m", ":lua require(\"harpoon.mark\").add_file()<cr>")
 map("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>")
 map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")
@@ -76,25 +73,6 @@ function changeL()
         vim.cmd(":normal! l")
     end
 end
-
-local downWordState = false
-function changeH()
-    local mode = vim.api.nvim_get_mode().mode
-    if downWordState and mode == "n" then
-        vim.cmd(":normal b<CR>")
-        downWordState = false
-    elseif not downWordState and mode == "n" then
-        vim.cmd(":normal ge<CR>")
-        downWordState = true
-    else
-        vim.cmd(":normal! h")
-    end
-end
-
-map("n", "l", changeL)
-map("n", "h", changeH)
-map("x", "l", changeL)
-map("x", "h", changeH)
 
 local state = true
 function chnumber()
