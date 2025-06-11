@@ -34,6 +34,8 @@ map("x", "<C-c>", "<ESC>")
 
 map("n", "<leader>v", ":Format<cr>")
 map("n", "<leader>t", ":Telescope find_files<cr>")
+
+-- Harpoon
 map("n", "<leader>m", ":lua require(\"harpoon.mark\").add_file()<cr>")
 map("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>")
 map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")

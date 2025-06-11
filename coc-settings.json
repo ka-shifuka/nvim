@@ -59,8 +59,17 @@
         "vue": "html",
         "vue-html": "html"
     },
-    "emmet.excludeLanguages": ["markdown"],
-    "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "pairs.enableCharacters": [
+        "(",
+        "[",
+        "{",
+        "'",
+        "\"",
+        "`"
+    ],
     "vetur.ignoreProjectWarning": false,
     "vetur.validation.style": false,
     "vetur.validation.script": false,
@@ -92,47 +101,49 @@
     "zig.debugLog": false,
     "languageserver": {
         "glsl": {
-            "command": "$HOME/langserver/glsl_analyzer",
-            "filetypes": ["glsl"],
+            "command": "$HOME/lang-server/glsl_analyzer",
+            "filetypes": [
+                "glsl"
+            ],
             "trace.server": "verbose",
-            "rootPatterns": [".editorconfig"]
+            "rootPatterns": [
+                ".editorconfig"
+            ]
+        },
+        "rust": {
+            "command": "$HOME/lang-server/rust-ls",
+            "filetypes": [
+                "rs",
+                "rust"
+            ],
+            "trace.server": "verbose",
+            "rootPatterns": [
+                ".editorconfig"
+            ]
+        },
+        "zig": {
+            "command": "$HOME/lang-server/zig-ls",
+            "filetypes": [
+                "zig"
+            ],
+            "trace.server": "verbose",
+            "rootPatterns": [
+                ".editorconfig"
+            ]
         },
         "lua": {
             "command": "lua-language-server",
-            "filetypes": ["lua"],
-            "trace.server": "verbose",
+            "filetypes": [
+                "lua"
+            ],
+            "trace.server": "off",
             "rootPatterns": [
                 ".editorconfig",
                 ".luarc.json",
                 ".git/",
                 "main.lua",
                 "init.lua"
-            ],
-            "settings": {
-                "workspace": {
-                    "library": [],
-                    "maxPreload": 2000,
-                    "preloadFileSize": 1000
-                },
-                "runtime": {
-                    "version": "Lua 5.1"
-                },
-                "diagnostics": {
-                    "enable": true,
-                    "globals": [
-                        "hs",
-                        "vim",
-                        "it",
-                        "describe",
-                        "before_each",
-                        "after_each"
-                    ],
-                    "disable": ["lowercase-global"]
-                },
-                "completion": {
-                    "keywordSnippet": "Disable"
-                }
-            }
+            ]
         }
     }
 }

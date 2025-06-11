@@ -2,7 +2,7 @@ set nocompatible
 
 call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'ThePrimeagen/harpoon'
+  Plug 'ThePrimeagen/harpoon' 
   Plug 'nvim-telescope/telescope.nvim'  
   Plug 'itchyny/lightline.vim'
   Plug 'matze/vim-move'
@@ -31,9 +31,9 @@ let g:move_key_modifier_visualmode = 'S'
 let g:indentLine_setConceal = 0 
 
 let g:coc_global_extensions = ['coc-json', 'coc-pairs']
-hi CocFloating ctermbg=LightBlue
+hi CocFloating ctermbg=DarkBlue
 
-set background=light
+set background=dark
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
@@ -59,4 +59,4 @@ require('rainbow_setup')
 require('key_maps')
 -- require('present')
 
-vim.cmd("colorscheme rose-pine-dawn")
+vim.cmd("colorscheme rose-pine")
