@@ -31,9 +31,9 @@ let g:move_key_modifier_visualmode = 'S'
 let g:indentLine_setConceal = 0 
 
 let g:coc_global_extensions = ['coc-json', 'coc-pairs']
-hi CocFloating ctermbg=DarkBlue
+hi CocFloating ctermbg=LightBlue
 
-set background=dark
+set background=light
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
