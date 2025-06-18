@@ -35,7 +35,7 @@ hi CocFloating ctermbg=DarkBlue
 
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'rosepine_moon',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
@@ -45,7 +45,6 @@ let g:lightline = {
       \   'charvaluehex': '0x%B'
       \ },
       \ }
-
 
 lua << EOF
 require('oil_setup')

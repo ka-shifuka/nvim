@@ -14,10 +14,11 @@ opt.lazyredraw = true
 opt.updatetime = 300
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.scrolloff = 6
+opt.scrolloff = 8
 
 -- indentations
 opt.breakindent = true
+opt.linebreak = true
 
 -- color
 opt.termguicolors = true
