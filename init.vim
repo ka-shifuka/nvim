@@ -19,6 +19,7 @@ call plug#begin()
   Plug '$HOME/repository/presentation.nvim'
 call plug#end()
 
+
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 let g:netrw_liststyle = 3
@@ -57,5 +58,6 @@ require('telescope_setup')
 require('rainbow_setup')
 require('key_maps')
 -- require('present')
+-- resprite v 1.25.2
 
 vim.cmd("colorscheme rose-pine")

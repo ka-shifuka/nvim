@@ -19,6 +19,7 @@ opt.scrolloff = 8
 -- indentations
 opt.breakindent = true
 opt.linebreak = true
+opt.breakindentopt = "shift:4"
 
 -- color
 opt.termguicolors = true
