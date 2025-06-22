@@ -15,11 +15,12 @@ opt.updatetime = 300
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.scrolloff = 8
+opt.guicursor = "n-v-i-c:block"
 
 -- indentations
 opt.breakindent = true
 opt.linebreak = true
-opt.breakindentopt = "shift:4"
+opt.breakindentopt = "shift:2"
 
 -- color
 opt.termguicolors = true
