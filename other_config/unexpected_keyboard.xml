@@ -8,7 +8,7 @@
     <key width="1.43" key0="alt"/>
     <key width="1.43" key0="left" key2="up" key3="down"/>
     <key width="1.43" key0="right"/>
- </row>
+  </row>
   <row>
     <key key0="q" key2="1" key4="esc"/>
     <key key0="w" key1="~" key2="2" key3="\@"/>

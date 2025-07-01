@@ -2,14 +2,18 @@
     "coc.preferences.formatOnSave": false,
     "suggest.floatConfig": {
         "border": true,
-        "rounded": true
+        "rounded": true,
+        "maxWidth": 80,
+        "highlight": "CocFloating"
     },
     "signature.floatConfig": {
         "rounded": true,
-        "border": true
+        "border": true,
+        "highlight": "CocFloating",
+        "maxWidth": 80
     },
     "hover.floatConfig": {
-        "maxWidth": 50
+        "maxWidth": 80
     },
     "suggest.completionItemKindLabels": {
         "text": " text",
@@ -122,7 +126,7 @@
             ]
         },
         "zig": {
-            "command": "$HOME/lang-server/zig-ls",
+            "command": "$HOME/lang-server/zls",
             "filetypes": [
                 "zig"
             ],

@@ -15,6 +15,9 @@ call plug#begin()
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'ThePrimeagen/vim-be-good'
+  Plug 'navarasu/onedark.nvim'
+  Plug 'ellisonleao/gruvbox.nvim'
+  Plug 'Aasim-A/scrollEOF.nvim'
 
   Plug '$HOME/repository/presentation.nvim'
 call plug#end()
@@ -36,7 +39,7 @@ hi CocFloating ctermbg=DarkBlue
 
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'rosepine_moon',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
@@ -57,7 +60,9 @@ require('rosepine_setup')
 require('telescope_setup')
 require('rainbow_setup')
 require('key_maps')
+require('scrollEOF').setup()
+
 -- require('present')
 -- resprite v 1.25.2
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme onedark")
