@@ -98,6 +98,10 @@
         "vue-html": "html"
     },
     "clangd.trace.server": "messages",
+    "clangd.arguments": [
+        "-header-insertion=never",
+        "--function-arg-placeholders=0"
+    ],
     "prettier.vueIndentScriptAndStyle": true,
     "zig.enabled": true,
     "zig.startUpMessage": true,
