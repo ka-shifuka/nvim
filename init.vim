@@ -14,14 +14,11 @@ call plug#begin()
   Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-context'
-  Plug 'ThePrimeagen/vim-be-good'
-  Plug 'navarasu/onedark.nvim'
-  Plug 'ellisonleao/gruvbox.nvim'
   Plug 'Aasim-A/scrollEOF.nvim'
+  Plug 'itchyny/vim-gitbranch'
 
   Plug '$HOME/repository/presentation.nvim'
 call plug#end()
-
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -35,24 +32,29 @@ let g:move_key_modifier_visualmode = 'S'
 let g:indentLine_setConceal = 0 
 
 let g:coc_global_extensions = ['coc-json', 'coc-pairs']
-hi CocFloating ctermbg=DarkBlue
+"hi CocFloating ctermbg=DarkBlue
+hi CocFloating ctermbg=Gray
 
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'rosepine',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \             [ '', 'fileencoding', '', '' ] ]
+      \             [ '', 'fileencoding', '', '' ] ],
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component': {
-      \   'charvaluehex': '0x%B'
+      \   'charvaluehex': '0x%B',
+      \   'gitbranch': gitbranch#name()
       \ },
       \ }
 
 lua << EOF
 require('oil_setup')
 require('coc_setup')
+
 require('harpoon_setup')
 require('treesitter_setup')
 require('ibl_setup')
@@ -65,4 +67,4 @@ require('scrollEOF').setup()
 -- require('present')
 -- resprite v 1.25.2
 
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme rose-pine-dawn")

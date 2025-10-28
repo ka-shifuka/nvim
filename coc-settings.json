@@ -43,7 +43,7 @@
         "typeParameter": " type parameter",
         "default": " default"
     },
-    "npm.binPath": "npm",
+    "npm.binPath": "pnpm",
     "javascript.showUnused": false,
     "javascript.showDeprecated": false,
     "typescript.showUnused": false,
@@ -111,7 +111,9 @@
         "glsl": {
             "command": "$HOME/lang-server/glsl_analyzer",
             "filetypes": [
-                "glsl"
+                "glsl",
+                "vert",
+                "frag"
             ],
             "trace.server": "verbose",
             "rootPatterns": [

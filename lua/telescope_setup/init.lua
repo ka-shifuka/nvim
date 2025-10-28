@@ -4,7 +4,8 @@ require('telescope').setup {
             "node_modules/*",
             "node_modules",
             "lua_modules/*",
-            "lua_modules"
+            "lua_modules",
+            "library"
         }
     }
 }
