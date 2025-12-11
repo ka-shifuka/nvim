@@ -32,7 +32,7 @@ let g:move_key_modifier_visualmode = 'S'
 let g:indentLine_setConceal = 0 
 
 let g:coc_global_extensions = ['coc-json', 'coc-pairs']
-"hi CocFloating ctermbg=DarkBlue
+" hi CocFloating ctermbg=DarkBlue
 hi CocFloating ctermbg=Gray
 
 set background=dark
@@ -43,11 +43,11 @@ let g:lightline = {
       \              [ 'percent' ],
       \             [ '', 'fileencoding', '', '' ] ],
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'icon', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component': {
-      \   'charvaluehex': '0x%B',
-      \   'gitbranch': gitbranch#name()
+      \   'gitbranch': gitbranch#name(),
+      \   'icon': "󱋩"
       \ },
       \ }
 
