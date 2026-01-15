@@ -21,6 +21,7 @@ opt.guicursor = "n-v-i-c:block"
 opt.breakindent = true
 opt.linebreak = true
 opt.breakindentopt = "shift:2"
+opt.wrap = true
 
 -- color
 opt.termguicolors = true
@@ -36,7 +37,7 @@ map("n", "<C-c>", "<ESC>")
 map("x", "<C-c>", "<ESC>")
 
 map("n", "<leader>v", ":Format<cr>")
-map("n", "<leader>t", ":Telescope find_files<cr>")
+map("n", "<leader>j", ":Telescope find_files<cr>")
 
 -- Harpoon
 map("n", "<leader>m", ":lua require(\"harpoon.mark\").add_file()<cr>")
@@ -55,41 +56,39 @@ map("x", "<leader>p", "\"+p")
 map("n", "x", "\"_x")
 map("n", "j", "gj")
 map("n", "k", "gk")
--- map("n", "<C-j>", ")")
--- map("n", "<C-k>", "(")
--- map("v", "<C-j>", ")")
--- map("v", "<C-k>", "(")
 
 map("n", "<C-j>", "10gj")
 map("n", "<C-k>", "10gk")
 map("v", "<C-j>", "10gj")
 map("v", "<C-k>", "10gk")
 
-local upWordState = false
-function changeL()
-    local mode = vim.api.nvim_get_mode().mode
-    if upWordState and mode == "n" then
-        vim.cmd(":normal w<CR>")
-        upWordState = false
-    elseif not upWordState and mode == "n" then
-        vim.cmd(":normal e<CR>")
-        upWordState = true
-    else
-        vim.cmd(":normal! l")
-    end
-end
-
-local state = true
-function chnumber()
-    if state then
+local is_number_mode = true
+local function change_number_mode()
+    if is_number_mode then
         vim.opt.number = false
         vim.opt.relativenumber = false
-        state = false
+        is_number_mode = false
         return
     end
-    state = true
+    is_number_mode = true
     vim.opt.number = true
     vim.opt.relativenumber = true
 end
 
-map("n", "<C-n>", chnumber)
+local is_indent_mode = true
+local function change_indent_mode()
+    if is_indent_mode then
+        is_indent_mode = false
+        opt.breakindent = false
+        opt.linebreak = false
+        opt.wrap = false
+        return
+    end
+    is_indent_mode = true
+    opt.breakindent = true
+    opt.linebreak = true
+    opt.wrap = true
+end
+
+map("n", "<C-n>", change_number_mode)
+map("n", "<C-m>", change_indent_mode)
