@@ -63,7 +63,7 @@ require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
 require('telescope_setup')
--- require('rainbow_setup')
+require('rainbow_setup')
 require('key_maps')
 require('scrollEOF').setup()
 
