@@ -16,8 +16,11 @@ call plug#begin()
   Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'Aasim-A/scrollEOF.nvim'
   Plug 'itchyny/vim-gitbranch'
+  Plug 'jbgutierrez/vim-better-comments'
 
-  Plug '$HOME/repository/presentation.nvim'
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+  Plug 'AlessandroYorba/Sierra'
+  Plug 'kepano/flexoki-neovim'
 call plug#end()
 
 nnoremap <SPACE> <Nop>
@@ -29,7 +32,7 @@ filetype plugin on
 
 let g:move_key_modifier = 'S'
 let g:move_key_modifier_visualmode = 'S'
-let g:indentLine_setConceal = 0 
+let g:indentLine_setConceal = 0
 
 let g:coc_global_extensions = ['coc-json', 'coc-pairs']
 " hi CocFloating ctermbg=DarkBlue
@@ -37,7 +40,7 @@ hi CocFloating ctermbg=Gray
 
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'rosepine',
+      \ 'colorscheme': 'ayu_dark',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
@@ -60,11 +63,11 @@ require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
 require('telescope_setup')
-require('rainbow_setup')
+-- require('rainbow_setup')
 require('key_maps')
 require('scrollEOF').setup()
 
 -- require('present')
 -- resprite v 1.25.2
 
-vim.cmd("colorscheme rose-pine-dawn")
+vim.cmd("colorscheme sierra")

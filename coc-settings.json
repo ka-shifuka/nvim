@@ -103,10 +103,6 @@
         "--function-arg-placeholders=0"
     ],
     "prettier.vueIndentScriptAndStyle": true,
-    "zig.enabled": true,
-    "zig.startUpMessage": true,
-    "zig.path": "zls",
-    "zig.debugLog": false,
     "languageserver": {
         "glsl": {
             "command": "$HOME/lang-server/glsl_analyzer",
