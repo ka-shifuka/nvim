@@ -2,6 +2,7 @@ set nocompatible
 
 call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
+
   Plug 'ThePrimeagen/harpoon' 
   Plug 'nvim-telescope/telescope.nvim'  
   Plug 'itchyny/lightline.vim'
@@ -40,7 +41,7 @@ hi CocFloating ctermbg=Gray
 
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'ayu_dark',
+      \ 'colorscheme': 'rosepine',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
@@ -63,11 +64,11 @@ require('treesitter_setup')
 require('ibl_setup')
 require('rosepine_setup')
 require('telescope_setup')
-require('rainbow_setup')
+--require('rainbow_setup')
 require('key_maps')
 require('scrollEOF').setup()
 
 -- require('present')
 -- resprite v 1.25.2
 
-vim.cmd("colorscheme sierra")
+vim.cmd("colorscheme rose-pine-dawn")
