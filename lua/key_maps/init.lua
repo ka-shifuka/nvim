@@ -46,6 +46,8 @@ map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")
 map("n", "<leader>n", ":lua require(\"harpoon.ui\").nav_next()<cr>")
 map("n", "<leader>b", ":lua require(\"harpoon.ui\").nav_prev()<cr>")
 
+map("n", "<leader>u", ":lua require(\"undotree\").toggle()<cr>")
+
 map("i", "<C-k>", "/***/ <Left><Left><Left>")
 map("n", "<leader>d", "\"_d")
 map("x", "<leader>d", "\"_d")

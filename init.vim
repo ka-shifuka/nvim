@@ -18,6 +18,7 @@ call plug#begin()
   Plug 'Aasim-A/scrollEOF.nvim'
   Plug 'itchyny/vim-gitbranch'
   Plug 'jbgutierrez/vim-better-comments'
+  Plug 'jiaoshijie/undotree'
 
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'AlessandroYorba/Sierra'
