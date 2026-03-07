@@ -95,6 +95,9 @@ end
 vim.api.nvim_create_user_command("Fig", function(args)
     vim.cmd(":r!figlet -f slant " .. "\"" .. args.args .. "\"")
 end, { nargs = 1 })
+vim.api.nvim_create_user_command("Figsm", function(args)
+    vim.cmd(":r!figlet -f smslant " .. "\"" .. args.args .. "\"")
+end, { nargs = 1 })
 
 map("n", "<C-n>", change_number_mode)
 map("n", "<C-m>", change_indent_mode)
