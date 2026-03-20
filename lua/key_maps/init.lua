@@ -21,7 +21,9 @@ opt.guicursor = "n-v-i-c:block"
 opt.breakindent = true
 opt.linebreak = true
 opt.breakindentopt = "shift:2"
-opt.wrap = true
+opt.wrap = false
+opt.foldmethod = "indent"
+opt.foldlevelstart = 99
 
 -- color
 opt.termguicolors = true
@@ -77,27 +79,17 @@ local function change_number_mode()
     vim.opt.relativenumber = true
 end
 
-local is_indent_mode = true
-local function change_indent_mode()
-    if is_indent_mode then
-        is_indent_mode = false
-        opt.breakindent = false
-        opt.linebreak = false
-        opt.wrap = false
-        return
-    end
-    is_indent_mode = true
-    opt.breakindent = true
-    opt.linebreak = true
-    opt.wrap = true
-end
-
 vim.api.nvim_create_user_command("Fig", function(args)
     vim.cmd(":r!figlet -f slant " .. "\"" .. args.args .. "\"")
 end, { nargs = 1 })
 vim.api.nvim_create_user_command("Figsm", function(args)
     vim.cmd(":r!figlet -f smslant " .. "\"" .. args.args .. "\"")
 end, { nargs = 1 })
+vim.api.nvim_create_user_command("Wrap", function(_)
+    vim.cmd(":set wrap")
+end, { nargs = 0 })
+vim.api.nvim_create_user_command("NoWrap", function(_)
+    vim.cmd(":set nowrap")
+end, { nargs = 0 })
 
 map("n", "<C-n>", change_number_mode)
-map("n", "<C-m>", change_indent_mode)
