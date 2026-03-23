@@ -15,6 +15,7 @@ opt.updatetime = 300
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.scrolloff = 6
+opt.sidescrolloff = 10
 opt.guicursor = "n-v-i-c:block"
 
 -- indentations
@@ -23,7 +24,7 @@ opt.linebreak = true
 opt.breakindentopt = "shift:2"
 opt.wrap = false
 opt.foldmethod = "indent"
-opt.foldlevelstart = 99
+-- opt.foldlevelstart = 99
 
 -- color
 opt.termguicolors = true
