@@ -4,13 +4,13 @@ call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
 
   Plug 'ThePrimeagen/harpoon' 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-telescope/telescope.nvim'  
   Plug 'itchyny/lightline.vim'
   Plug 'matze/vim-move'
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'stevearc/oil.nvim'
-  Plug 'HiPhish/rainbow-delimiters.nvim'
   Plug 'tribela/vim-transparent'
   Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -57,17 +57,17 @@ let g:lightline = {
       \ }
 
 lua << EOF
-require('oil_setup')
-require('coc_setup')
+require("oil_setup")
+require("coc_setup")
+-- require("mini.map").setup()
 
-require('harpoon_setup')
-require('treesitter_setup')
-require('ibl_setup')
-require('rosepine_setup')
-require('telescope_setup')
---require('rainbow_setup')
-require('key_maps')
-require('scrollEOF').setup()
+require("harpoon_setup")
+require("treesitter_setup")
+require("ibl_setup")
+require("rosepine_setup")
+require("telescope_setup")
+require("key_maps")
+require("scrollEOF").setup()
 
 -- require('present')
 -- resprite v 1.25.2

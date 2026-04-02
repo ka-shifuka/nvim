@@ -86,11 +86,16 @@ end, { nargs = 1 })
 vim.api.nvim_create_user_command("Figsm", function(args)
     vim.cmd(":r!figlet -f smslant " .. "\"" .. args.args .. "\"")
 end, { nargs = 1 })
+
 vim.api.nvim_create_user_command("Wrap", function(_)
     vim.cmd(":set wrap")
 end, { nargs = 0 })
 vim.api.nvim_create_user_command("NoWrap", function(_)
     vim.cmd(":set nowrap")
 end, { nargs = 0 })
+
+-- vim.api.nvim_create_user_command("MiniMap", function(_)
+--     vim.cmd("lua MiniMap.toggle()")
+-- end, { nargs = 0 })
 
 map("n", "<C-n>", change_number_mode)
