@@ -168,6 +168,21 @@
             "initializationOptions": {
                 "usePlaceholders": true
             }
+        },
+        "js/ts" : {
+            "command": "typescript-language-server",
+            "args": ["--stdio"],
+            "rootPatterns":[
+                ".editorconfig",
+                "main.js",
+                "main.ts",
+            ],
+            "filetypes": [
+                "typescript",
+                "javascript",
+                "ts",
+                "js"
+            ]
         }
     },
     "snippets.ultisnips.pythonPrompt": false
