@@ -107,9 +107,7 @@
         "glsl": {
             "command": "$HOME/lang-server/glsl_analyzer",
             "filetypes": [
-                "glsl",
-                "vert",
-                "frag"
+                "glsl"
             ],
             "trace.server": "verbose",
             "rootPatterns": [
