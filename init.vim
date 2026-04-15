@@ -23,6 +23,7 @@ call plug#begin()
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'AlessandroYorba/Sierra'
   Plug 'kepano/flexoki-neovim'
+  Plug 'kiddos/gemini.nvim', { 'as': 'gemini' }
 call plug#end()
 
 nnoremap <SPACE> <Nop>
@@ -57,6 +58,8 @@ let g:lightline = {
       \ }
 
 lua << EOF
+vim.cmd("colorscheme rose-pine-dawn")
+
 require("oil_setup")
 require("coc_setup")
 -- require("mini.map").setup()
@@ -68,8 +71,8 @@ require("rosepine_setup")
 require("telescope_setup")
 require("key_maps")
 require("scrollEOF").setup()
+-- require("gemini_setup")
 
 -- require('present')
 -- resprite v 1.25.2
 
-vim.cmd("colorscheme rose-pine-dawn")

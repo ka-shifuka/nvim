@@ -1,5 +1,5 @@
 require("rose-pine").setup({
-    variant = "main",      -- auto, main, moon, or dawn
+    variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
@@ -7,14 +7,13 @@ require("rose-pine").setup({
     enable = {
         terminal = true,
         legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-        migrations = true,        -- Handle deprecated options automatically
+        migrations = true, -- Handle deprecated options automatically
     },
 
     styles = {
-        bold = false,
+        bold = true,
         italic = false,
         transparency = true,
-        underline = false
     },
 
     groups = {
@@ -56,9 +55,13 @@ require("rose-pine").setup({
         -- },
     },
 
+	-- NOTE: Highlight groups are extended (merged) by default. Disable this
+	-- per group via `inherit = false`
     highlight_groups = {
         -- Comment = { fg = "foam" },
+        -- StatusLine = { fg = "love", bg = "love", blend = 15 },
         -- VertSplit = { fg = "muted", bg = "muted" },
+        -- Visual = { fg = "base", bg = "text", inherit = false },
     },
 
     before_highlight = function(group, highlight, palette)
