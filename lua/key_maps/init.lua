@@ -49,7 +49,7 @@ map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")
 map("n", "<leader>n", ":lua require(\"harpoon.ui\").nav_next()<cr>")
 map("n", "<leader>b", ":lua require(\"harpoon.ui\").nav_prev()<cr>")
 
-map("n", "<leader>u", ":lua require(\"undotree\").toggle()<cr>")
+-- map("n", "<leader>u", ":lua require(\"undotree\").toggle()<cr>")
 
 map("i", "<C-k>", "/***/ <Left><Left><Left>")
 map("n", "<leader>d", "\"_d")
@@ -79,6 +79,7 @@ local function change_number_mode()
     vim.opt.number = true
     vim.opt.relativenumber = true
 end
+map("n", "<C-n>", change_number_mode)
 
 vim.api.nvim_create_user_command("Fig", function(args)
     vim.cmd(":r!figlet -f slant " .. "\"" .. args.args .. "\"")
@@ -94,8 +95,19 @@ vim.api.nvim_create_user_command("NoWrap", function(_)
     vim.cmd(":set nowrap")
 end, { nargs = 0 })
 
+local function m()
+    vim.cmd(":r!printf \"--- \"")
+    vim.api.nvim_input("$")
+end
+
+local function n()
+    vim.cmd(":r!printf \"local graphics = love.graphics\"")
+    
+end
+
+map("n", "<leader>kk", m)
+map("n", "<leader>kg", n)
+
 -- vim.api.nvim_create_user_command("MiniMap", function(_)
 --     vim.cmd("lua MiniMap.toggle()")
 -- end, { nargs = 0 })
-
-map("n", "<C-n>", change_number_mode)

@@ -107,6 +107,8 @@
         "glsl": {
             "command": "$HOME/lang-server/glsl_analyzer",
             "filetypes": [
+                "g",
+                "pixel",
                 "glsl"
             ],
             "trace.server": "verbose",
