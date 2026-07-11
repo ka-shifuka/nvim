@@ -128,7 +128,7 @@
             ]
         },
         "zig": {
-            "command": "$HOME/lang-server/zls",
+            "command": "zls",
             "filetypes": [
                 "zig"
             ],

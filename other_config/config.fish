@@ -1,29 +1,46 @@
-# Put system-wide fish configuration entries here
-# or in .fish files in conf.d/
-# Files in conf.d can be overridden by the user
-# by files with the same name in $XDG_CONFIG_HOME/fish/conf.d
-
-# This file is run by all fish instances.
-# To include configuration only for login shells, use
-# if status is-login
-#    ...
-# end
-# To include configuration only for interactive shells, use
-# if status is-interactive
-#   ...
-# end
-function __fish_command_not_found_handler --on-event fish_command_not_found
-/data/data/com.termux/files/usr/libexec/termux/command-not-found $argv[1]
+if status is-interactive
+# Commands to run in interactive sessions can go here
 end
 
-# TODO: remove when https://github.com/termux/termux-app/pull/4417 gets released
-status test-feature keyboard-protocols && set -U fish_features no-keyboard-protocols
+alias jadwal "echo \"
+       __          __               __
+      / /___ _____/ /      ______ _/ /
+ __  / / __ `/ __  / | /| / / __ `/ / 
+/ /_/ / /_/ / /_/ /| |/ |/ / /_/ / /  
+\____/\__,_/\__,_/ |__/|__/\__,_/_/   
 
-set -g USER "ka-shifuka"
-set -x MANPAGER 'nvim +Man!'
+-- Everyday ---------------------
+05:00 = Workout (Shadow Boxing)
+07:00 = Bath and Gamedev
+11:00 = Break
+13:00 = Learn
+16:00 = Workout (General)
+18:00 = Bath and Prey
+19:00 = Gamedev
+21:00 = Sleep
 
-set -U fish_user_path $HOME/zig-linux-aarch64-0.14.0 $fish_user_path
+-- Pro Tips ---------------------
+Eat only one cup\"\n"
 
+# 1. Definisikan fungsi wisdom di dalam config
+function wisdom --description 'Generate a random piece of wisdom'
+    set -l wisdom_quotes \
+        "The internet has become the one using you, change it." \
+        "Your focus is scarce assets." \
+		"Dopamine and constant stimulation can impair your ability to think long term." \
+		"We only hear about the richest and most successful YouTubers, not about the ones who fail." \
+		"The most important values of all is patience."
 
-alias py=python
-alias vim=nvim
+    set -l picked_quote (random choice $wisdom_quotes)
+    set -l target_width (math "round($COLUMNS * 8 / 10)")
+
+    echo "\"$picked_quote\"" | fmt -w $target_width | while read -l line
+	   echo -e "$line"
+    end
+	echo ""
+end
+
+function sshx --description 'SSH automate'
+	sshd
+	am start -n com.server.auditor.ssh.client/com.server.auditor.ssh.client.navigation.MainActivity
+end
