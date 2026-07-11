@@ -58,6 +58,7 @@ let g:lightline = {
       \ }
 
 lua << EOF
+require("rosepine_setup")
 vim.cmd("colorscheme rose-pine-dawn")
 
 require("oil_setup")
@@ -67,7 +68,6 @@ require("coc_setup")
 require("harpoon_setup")
 require("treesitter_setup")
 require("ibl_setup")
-require("rosepine_setup")
 require("telescope_setup")
 require("key_maps")
 require("scrollEOF").setup()
@@ -76,3 +76,5 @@ require("scrollEOF").setup()
 -- require('present')
 -- resprite v 1.25.2
 
+vim.opt.clipboard = ""
+vim.g.loaded_clipboard_provider = 1
