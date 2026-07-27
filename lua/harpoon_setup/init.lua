@@ -1,7 +1,7 @@
 require("harpoon").setup({
-  menu = {
-    width = 50,
-  },
+    menu = {
+        width = math.floor(vim.api.nvim_win_get_width(0) * 0.8),
+    },
 })
 
 require("telescope").load_extension('harpoon')
