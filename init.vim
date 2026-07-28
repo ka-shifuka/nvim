@@ -13,8 +13,8 @@ call plug#begin()
   Plug 'stevearc/oil.nvim'
   Plug 'tribela/vim-transparent'
   Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'nvim-treesitter/nvim-treesitter-context'
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'Aasim-A/scrollEOF.nvim'
   Plug 'itchyny/vim-gitbranch'
   Plug 'jbgutierrez/vim-better-comments'
@@ -66,7 +66,7 @@ require("coc_setup")
 -- require("mini.map").setup()
 
 require("harpoon_setup")
-require("treesitter_setup")
+-- require("treesitter_setup")
 require("ibl_setup")
 require("telescope_setup")
 require("key_maps")
