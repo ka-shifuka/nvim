@@ -1,6 +1,6 @@
 {
     "coc.preferences.formatOnSave": false,
-    "semanticTokens.enable": true,
+    "semanticTokens.enable": false,
     "semanticTokens.incrementTypes": [],
     "suggest.floatConfig": {
         "border": true,

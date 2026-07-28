@@ -4,7 +4,6 @@ call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
 
   Plug 'ThePrimeagen/harpoon' 
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-telescope/telescope.nvim'  
   Plug 'itchyny/lightline.vim'
   Plug 'matze/vim-move'
@@ -12,17 +11,16 @@ call plug#begin()
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'stevearc/oil.nvim'
   Plug 'tribela/vim-transparent'
-  Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
-  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  " Plug 'nvim-treesitter/nvim-treesitter-context'
   Plug 'Aasim-A/scrollEOF.nvim'
   Plug 'itchyny/vim-gitbranch'
   Plug 'jbgutierrez/vim-better-comments'
-  " Plug 'jiaoshijie/undotree'
-
-  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'AlessandroYorba/Sierra'
   Plug 'kepano/flexoki-neovim'
+  Plug 'romus204/tree-sitter-manager.nvim'
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+  Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
   " Plug 'kiddos/gemini.nvim', { 'as': 'gemini' }
 call plug#end()
 
@@ -72,6 +70,7 @@ require("ibl_setup")
 require("telescope_setup")
 require("key_maps")
 require("scrollEOF").setup()
+require("tree-sitter-manager").setup()
 -- require("gemini_setup")
 
 -- require('present')
