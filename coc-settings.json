@@ -1,5 +1,6 @@
 {
     "coc.preferences.formatOnSave": false,
+    "semanticTokens.enable": true,
     "suggest.floatConfig": {
         "border": true,
         "rounded": true,
