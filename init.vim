@@ -23,7 +23,7 @@ call plug#begin()
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
   Plug 'AlessandroYorba/Sierra'
   Plug 'kepano/flexoki-neovim'
-  Plug 'kiddos/gemini.nvim', { 'as': 'gemini' }
+  " Plug 'kiddos/gemini.nvim', { 'as': 'gemini' }
 call plug#end()
 
 nnoremap <SPACE> <Nop>
@@ -59,6 +59,7 @@ let g:lightline = {
 
 lua << EOF
 require("rosepine_setup")
+require("catppuccin-setup")
 vim.cmd("colorscheme rose-pine-dawn")
 
 require("oil_setup")
