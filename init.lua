@@ -55,7 +55,8 @@ vim.g.lightline = {
         },
     },
     component = {
-        icon = "",
+        icon = "",
+        -- icon = "",
     },
     component_function = {
         gitbranch = "gitbranch#name",

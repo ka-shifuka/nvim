@@ -102,7 +102,6 @@ end
 
 local function n()
     vim.cmd(":r!printf \"local graphics = love.graphics\"")
-    
 end
 
 map("n", "<leader>kk", m)
