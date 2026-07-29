@@ -34,6 +34,8 @@ vim.g.move_key_modifier_visualmode = "S"
 vim.g.indentLine_setConceal = 0
 
 vim.g.coc_global_extensions = { "coc-json", "coc-pairs" }
+-- Set custom foreground and background colors for inlay hints
+vim.api.nvim_set_hl(0, "CocInlayHint", { fg = "#d7827e", bg = "NONE" })
 vim.api.nvim_set_hl(0, "CocFloating", { ctermbg = "Gray" })
 -- vim.api.nvim_set_hl(0, "CocFloating", { ctermbg = "DarkBlue" })
 
@@ -63,17 +65,20 @@ vim.g.lightline = {
     },
 }
 
-require("rose-pine-setup")
-require("catppuccin-setup")
-vim.cmd("colorscheme rose-pine-dawn")
+require "rose-pine-setup"
+require "catppuccin-setup"
+vim.cmd "colorscheme rose-pine-dawn"
 
-require("telescope-setup")
-require("harpoon-setup")
-require("coc-setup")
-require("ibl-setup")
-require("oil-setup")
+require "options"
+
+require "telescope-setup"
+require "harpoon-setup"
+require "coc-setup"
+require "ibl-setup"
+require "oil-setup"
 require("scrollEOF").setup()
 require("tree-sitter-manager").setup()
 
-require("keymaps")
+require "keymaps"
+
 -- resprite v 1.25.2

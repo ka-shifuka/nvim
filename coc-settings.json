@@ -1,4 +1,8 @@
 {
+    "inlayHint.enable": true,
+    "inlayHint.display": true,
+    "inlayHint.enableParameter": false,
+    "inlayHint.position": "inline",
     "coc.preferences.formatOnSave": false,
     "semanticTokens.enable": false,
     "semanticTokens.incrementTypes": [],
@@ -45,66 +49,11 @@
         "typeParameter": " type parameter",
         "default": " default"
     },
-    "npm.binPath": "pnpm",
-    "javascript.showUnused": false,
-    "javascript.showDeprecated": false,
-    "typescript.showUnused": false,
-    "inlayHint.enable": false,
-    "typescript.showDeprecated": false,
-    "css.validate": false,
-    "html-css-support.enabledLanguages": [
-        "html",
-        "vue",
-        "javascriptreact",
-        "typescriptreact",
-        "angular",
-        "javascript"
-    ],
-    "emmet.includeLanguages": {
-        "html": "html",
-        "vue": "html",
-        "vue-html": "html"
-    },
-    "emmet.excludeLanguages": [
-        "markdown"
-    ],
-    "pairs.enableCharacters": [
-        "(",
-        "[",
-        "{",
-        "'",
-        "\"",
-        "`"
-    ],
-    "vetur.ignoreProjectWarning": false,
-    "vetur.validation.style": false,
-    "vetur.validation.script": false,
-    "vetur.format.styleInitialIndent": true,
-    "vetur.format.scriptInitialIndent": true,
-    "html.filetypes": [
-        "html",
-        "handlebars",
-        "htmldjango",
-        "blade",
-        "vue",
-        "jsx",
-        "tsx"
-    ],
-    "tailwindCSS.includeLanguages": {
-        "eelixir": "html",
-        "elixir": "html",
-        "eruby": "html",
-        "html.twig": "html",
-        "vue": "html",
-        "css": "html",
-        "vue-html": "html"
-    },
     "clangd.trace.server": "messages",
     "clangd.arguments": [
         "-header-insertion=never",
         "--function-arg-placeholders=0"
     ],
-    "prettier.vueIndentScriptAndStyle": true,
     "languageserver": {
         "glsl": {
             "command": "$HOME/lang-server/glsl_analyzer",
@@ -112,27 +61,6 @@
                 "g",
                 "pixel",
                 "glsl"
-            ],
-            "trace.server": "verbose",
-            "rootPatterns": [
-                ".editorconfig"
-            ]
-        },
-        "rust": {
-            "command": "$HOME/lang-server/rust-ls",
-            "filetypes": [
-                "rs",
-                "rust"
-            ],
-            "trace.server": "verbose",
-            "rootPatterns": [
-                ".editorconfig"
-            ]
-        },
-        "zig": {
-            "command": "zls",
-            "filetypes": [
-                "zig"
             ],
             "trace.server": "verbose",
             "rootPatterns": [
@@ -153,39 +81,5 @@
                 "init.lua"
             ]
         },
-        "go": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.work",
-                "go.mod",
-                ".vim/",
-                ".git/",
-                ".hg/",
-                ".editorconfig",
-                "main.go"
-            ],
-            "filetypes": [
-                "go"
-            ],
-            "initializationOptions": {
-                "usePlaceholders": true
-            }
-        },
-        "js/ts" : {
-            "command": "typescript-language-server",
-            "args": ["--stdio"],
-            "rootPatterns":[
-                ".editorconfig",
-                "main.js",
-                "main.ts",
-            ],
-            "filetypes": [
-                "typescript",
-                "javascript",
-                "ts",
-                "js"
-            ]
-        }
     },
-    "snippets.ultisnips.pythonPrompt": false
 }
