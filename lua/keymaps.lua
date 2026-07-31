@@ -9,6 +9,7 @@ map("x", "<C-c>", "<ESC>")
 
 map("n", "<leader>v", ":Format<cr>")
 map("n", "<leader>j", ":Telescope find_files<cr>")
+map("v", "p", "P")
 
 -- Harpoon
 map("n", "<leader>m", ":lua require(\"harpoon.mark\").add_file()<cr>")

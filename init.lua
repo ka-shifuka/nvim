@@ -44,6 +44,12 @@ vim.g.loaded_clipboard_provider = 1
 vim.opt.background = "dark"
 vim.opt.clipboard = ""
 
+vim.filetype.add({
+    pattern = {
+        ['.*/%.github[%w/]+workflows[%w/]+.*%.ya?ml'] = 'yaml.github',
+    },
+})
+
 vim.g.lightline = {
     colorscheme = "rosepine",
     active = {
