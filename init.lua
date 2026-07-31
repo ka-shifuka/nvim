@@ -2,20 +2,21 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 Plug("nvim-lua/plenary.nvim")
 
-Plug("ThePrimeagen/harpoon")
-Plug("nvim-telescope/telescope.nvim")
-Plug("itchyny/lightline.vim")
-Plug("matze/vim-move")
-Plug("nvim-tree/nvim-web-devicons")
-Plug("lukas-reineke/indent-blankline.nvim")
-Plug("stevearc/oil.nvim")
-Plug("tribela/vim-transparent")
 Plug("Aasim-A/scrollEOF.nvim")
+Plug("AlessandroYorba/Sierra")
+Plug("ThePrimeagen/harpoon")
+Plug("itchyny/lightline.vim")
 Plug("itchyny/vim-gitbranch")
 Plug("jbgutierrez/vim-better-comments")
-Plug("AlessandroYorba/Sierra")
 Plug("kepano/flexoki-neovim")
+Plug("lukas-reineke/indent-blankline.nvim")
+Plug("matze/vim-move")
+Plug("nvim-telescope/telescope.nvim")
+Plug("nvim-tree/nvim-web-devicons")
 Plug("romus204/tree-sitter-manager.nvim")
+Plug("stevearc/oil.nvim")
+Plug("tribela/vim-transparent")
+Plug("nat-418/boole.nvim")
 
 Plug("neoclide/coc.nvim", { branch = "release" })
 Plug("catppuccin/nvim", { as = "catppuccin" })
@@ -78,7 +79,25 @@ require "ibl-setup"
 require "oil-setup"
 require("scrollEOF").setup()
 require("tree-sitter-manager").setup()
+require("boole").setup({
+    mappings = {
+        increment = '<C-a>',
+        decrement = '<C-x>'
+    },
+    -- User defined loops
+    additions = {
+        { 'Foo', 'Bar' },
+        { 'tic', 'tac', 'toe' }
+    },
+    allow_caps_additions = {
+        { 'enable', 'disable' }
+        -- enable → disable
+        -- Enable → Disable
+        -- ENABLE → DISABLE
+    }
+})
 
 require "keymaps"
+
 
 -- resprite v 1.25.2

@@ -3,6 +3,9 @@ if status is-interactive
     clear
 end
 
+set fish_greeting ""
+set -gx MANPAGER "nvim +Man!"
+
 alias jadwal "echo \"
        __          __               __
       / /___ _____/ /      ______ _/ /

@@ -1,11 +1,23 @@
 {
-    "inlayHint.enable": true,
+    "inlayHint.enable": false,
     "inlayHint.display": true,
     "inlayHint.enableParameter": false,
     "inlayHint.position": "inline",
     "coc.preferences.formatOnSave": false,
     "semanticTokens.enable": false,
     "semanticTokens.incrementTypes": [],
+    "pairs.enableCharacters": [
+        "(",
+        "[",
+        "{",
+        "'",
+        "\"",
+        "`",
+        "【",
+        "「",
+        "《",
+        "『"
+    ],
     "suggest.floatConfig": {
         "border": true,
         "rounded": true,
