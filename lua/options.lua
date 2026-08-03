@@ -1,8 +1,6 @@
--- [[ editor options ]]
-local opt = vim.opt
-
 vim.g.editorconfig = true
 
+local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 opt.compatible = false
