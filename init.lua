@@ -2,22 +2,23 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 Plug("nvim-lua/plenary.nvim")
 
+Plug("nvim-treesitter/nvim-treesitter-context")
+Plug("romus204/tree-sitter-manager.nvim")
+Plug("jbgutierrez/vim-better-comments")
+Plug("lukas-reineke/indent-blankline.nvim")
+Plug("nvim-telescope/telescope.nvim")
+Plug("nvim-tree/nvim-web-devicons")
 Plug("Aasim-A/scrollEOF.nvim")
-Plug("AlessandroYorba/Sierra")
 Plug("ThePrimeagen/harpoon")
 Plug("itchyny/lightline.vim")
 Plug("itchyny/vim-gitbranch")
-Plug("jbgutierrez/vim-better-comments")
 Plug("kepano/flexoki-neovim")
-Plug("lukas-reineke/indent-blankline.nvim")
-Plug("matze/vim-move")
-Plug("nvim-telescope/telescope.nvim")
-Plug("nvim-tree/nvim-web-devicons")
-Plug("romus204/tree-sitter-manager.nvim")
 Plug("stevearc/oil.nvim")
-Plug("tribela/vim-transparent")
 Plug("nat-418/boole.nvim")
+Plug("matze/vim-move")
 
+Plug("tribela/vim-transparent")
+Plug("AlessandroYorba/Sierra")
 Plug("neoclide/coc.nvim", { branch = "release" })
 Plug("catppuccin/nvim", { as = "catppuccin" })
 Plug("rose-pine/neovim", { as = "rose-pine" })
@@ -83,27 +84,40 @@ require "harpoon-setup"
 require "coc-setup"
 require "ibl-setup"
 require "oil-setup"
+
 require("scrollEOF").setup()
 require("tree-sitter-manager").setup()
 require("boole").setup({
     mappings = {
-        increment = '<C-a>',
-        decrement = '<C-x>'
+        increment = "<C-a>",
+        decrement = "<C-x>"
     },
     -- User defined loops
     additions = {
-        { 'Foo', 'Bar' },
-        { 'tic', 'tac', 'toe' }
+        { "Foo", "Bar" },
+        { "tic", "tac", "toe" }
     },
     allow_caps_additions = {
-        { 'enable', 'disable' }
+        { "enable", "disable" }
         -- enable → disable
         -- Enable → Disable
         -- ENABLE → DISABLE
     }
 })
+require("treesitter-context").setup{
+  enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+  multiwindow = false, -- Enable multiwindow support.
+  max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+  min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+  line_numbers = true,
+  multiline_threshold = 20, -- Maximum number of lines to show for a single context
+  trim_scope = "outer", -- Which context lines to discard if `max_lines` is exceeded. Choices: "inner", "outer"
+  mode = "cursor",  -- Line used to calculate context. Choices: "cursor", "topline"
+  -- Separator between context and content. Should be a single character string, like "-".
+  -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+  separator = nil,
+  zindex = 20, -- The Z-index of the context window
+  on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+}
 
 require "keymaps"
-
-
--- resprite v 1.25.2
