@@ -18,7 +18,10 @@ map("n", "<leader>o", ":lua require(\"harpoon.ui\").select_menu_item()<cr>")
 map("n", "<leader>n", ":lua require(\"harpoon.ui\").nav_next()<cr>")
 map("n", "<leader>b", ":lua require(\"harpoon.ui\").nav_prev()<cr>")
 
--- map("n", "<leader>u", ":lua require(\"undotree\").toggle()<cr>")
+map("n", "<leader>u", function()
+    vim.cmd.UndotreeToggle()
+    vim.cmd.UndoTreeFocus()
+end)
 
 map("i", "<C-k>", "/***/ <Left><Left><Left>")
 map("n", "<leader>d", "\"_d")
@@ -64,18 +67,16 @@ vim.api.nvim_create_user_command("NoWrap", function(_)
     vim.cmd(":set nowrap")
 end, { nargs = 0 })
 
-local function m()
+
+map("n", "<leader>kk", function()
     vim.cmd(":r!printf \"--- \"")
     vim.api.nvim_input("$")
-end
+end)
 
-local function n()
-    vim.cmd(":r!printf \"local graphics = love.graphics\"")
-end
-
-map("n", "<leader>kk", m)
-map("n", "<leader>kg", n)
-
--- vim.api.nvim_create_user_command("MiniMap", function(_)
---     vim.cmd("lua MiniMap.toggle()")
--- end, { nargs = 0 })
+map("n", "<leader>kg", function()
+    vim.cmd(":r!echo -e \"local graphics = love.graphics\"")
+end)
+map("n", "<leader>kp", function()
+    vim.cmd(":r!echo -e \"graphics.push()\"")
+    vim.cmd(":r!echo -e \"graphics.pop()\"")
+end)

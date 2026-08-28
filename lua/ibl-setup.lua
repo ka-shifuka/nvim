@@ -3,7 +3,9 @@ require("ibl").setup({
         char = "▏"
     },
     scope = {
-        show_exact_scope = true,
+        show_exact_scope = false,
+        show_start = false,
+        show_end = false,
     }
 })
 

@@ -12,8 +12,8 @@ opt.lazyredraw = true
 opt.updatetime = 300
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.scrolloff = 12
-opt.sidescrolloff = 20
+opt.scrolloff = 8
+opt.sidescrolloff = 15
 opt.guicursor = "n-v-i-c:block"
 
 -- indentations
