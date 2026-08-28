@@ -20,7 +20,7 @@ map("n", "<leader>b", ":lua require(\"harpoon.ui\").nav_prev()<cr>")
 
 map("n", "<leader>u", function()
     vim.cmd.UndotreeToggle()
-    vim.cmd.UndoTreeFocus()
+    vim.cmd.UndotreeFocus()
 end)
 
 map("i", "<C-k>", "/***/ <Left><Left><Left>")
