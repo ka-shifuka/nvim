@@ -22,7 +22,7 @@ opt.linebreak = true
 opt.breakindentopt = "shift:2"
 opt.wrap = false
 opt.foldmethod = "indent"
--- opt.foldlevelstart = 99
+opt.foldlevelstart = 0
 
 -- color
 opt.termguicolors = true
