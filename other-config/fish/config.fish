@@ -6,26 +6,6 @@ end
 set fish_greeting ""
 set -gx MANPAGER "nvim +Man!"
 
-alias jadwal "echo \"
-       __          __               __
-      / /___ _____/ /      ______ _/ /
- __  / / __ `/ __  / | /| / / __ `/ / 
-/ /_/ / /_/ / /_/ /| |/ |/ / /_/ / /  
-\____/\__,_/\__,_/ |__/|__/\__,_/_/   
-
--- Everyday ---------------------
-05:00 = Workout (Shadow Boxing)
-07:00 = Bath and Gamedev
-11:00 = Break
-13:00 = Learn
-16:00 = Workout (General)
-18:00 = Bath and Prey
-19:00 = Gamedev
-21:00 = Sleep
-
--- Pro Tips ---------------------
-Eat only one cup\"\n"
-
 # 1. Definisikan fungsi wisdom di dalam config
 function wisdom --description 'Generate a random piece of wisdom'
     set -l wisdom_quotes \
@@ -42,6 +22,12 @@ function wisdom --description 'Generate a random piece of wisdom'
 	   echo -e "$line"
     end
 	echo ""
+end
+
+function jadwal --description 'jadwal'
+	echo -e "Senin-Kamis\t\t: GameDev"
+	echo -e "Sabtu-Minggu\t\t: Music"
+	echo -e "Jum'at\t\t\t: Rest and Explore"
 end
 
 function sshx --description 'SSH automate'
