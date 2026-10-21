@@ -231,7 +231,7 @@ require("dooing").setup({
         toggle_todo = "x",
         delete_todo = "d",
         delete_completed = "D",
-        close_window = "q",
+        close_window = "<Esc>",
         undo_delete = "u",
         add_due_date = "H",
         remove_due_date = "r",
@@ -301,6 +301,5 @@ require("dooing").setup({
     hour_score_value = 1 / 8,
     done_sort_by_completed_time = false,
 })
-
 
 require "keymaps"
