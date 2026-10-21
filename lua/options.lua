@@ -24,8 +24,8 @@ opt.wrap = false
 opt.foldmethod = "indent"
 opt.foldlevelstart = 0
 
-vim.opt.timeoutlen = 300
-vim.opt.ttimeoutlen = 10
+-- vim.opt.timeoutlen = 300
+-- vim.opt.ttimeoutlen = 10
 
 -- color
 opt.termguicolors = true
