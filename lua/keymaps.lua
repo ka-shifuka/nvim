@@ -67,6 +67,10 @@ vim.api.nvim_create_user_command("NoWrap", function(_)
     vim.cmd(":set nowrap")
 end, { nargs = 0 })
 
+vim.api.nvim_create_user_command("SOFF", function(_)
+    vim.cmd(":set scrolloff=15")
+end, { nargs = 0 })
+
 
 map("n", "<leader>kk", function()
     vim.cmd(":r!printf \"--- \"")
